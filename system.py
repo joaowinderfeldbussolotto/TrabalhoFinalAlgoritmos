@@ -111,7 +111,7 @@ def show_users(loggedUser):
 def login(loggedUser = None):
     if isUserLogged(loggedUser):
         print('Usuário já está logado')
-        return
+        return loggedUser
     email = input("Digite o email: ")
     if '@' in email:
         pwd = input("Digite a senha: ")
