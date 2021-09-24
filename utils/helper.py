@@ -11,7 +11,10 @@ def digito_verificador(vetor):
 
 def isCpfOk(cpf):
     cpf_test = [int(i) for i in cpf]
+
     if len(cpf_test) != 11:
+        return False
+    if cpf_test.count(cpf_test[0]) == len(cpf_test):
         return False
     else:
         cpf_test = cpf_test[:9]
